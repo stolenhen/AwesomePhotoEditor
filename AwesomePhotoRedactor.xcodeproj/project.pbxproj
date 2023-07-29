@@ -13,6 +13,7 @@
 		7BAA844C2A728DE50029BF44 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BAA844B2A728DE50029BF44 /* Preview Assets.xcassets */; };
 		7BAA84532A737F9A0029BF44 /* FilterKernel.ci.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7BAA84522A737F9A0029BF44 /* FilterKernel.ci.metal */; };
 		7BAA84562A73831F0029BF44 /* PhotoRedactorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAA84552A73831F0029BF44 /* PhotoRedactorViewModel.swift */; };
+		7BDF9BC22A75179300C01053 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7BDF9BC12A75179300C01053 /* README.md */; };
 		7BF8B66D2A74F50F0030EC36 /* ImageFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF8B66C2A74F50F0030EC36 /* ImageFilter.swift */; };
 		7BF8B66F2A74F5750030EC36 /* BrightnessFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF8B66E2A74F5750030EC36 /* BrightnessFilter.swift */; };
 		7BF8B6742A74F8EA0030EC36 /* UIImage+stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF8B6732A74F8EA0030EC36 /* UIImage+stub.swift */; };
@@ -55,6 +56,7 @@
 		7BAA844B2A728DE50029BF44 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7BAA84522A737F9A0029BF44 /* FilterKernel.ci.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = FilterKernel.ci.metal; sourceTree = "<group>"; };
 		7BAA84552A73831F0029BF44 /* PhotoRedactorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRedactorViewModel.swift; sourceTree = "<group>"; };
+		7BDF9BC12A75179300C01053 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7BF8B66C2A74F50F0030EC36 /* ImageFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFilter.swift; sourceTree = "<group>"; };
 		7BF8B66E2A74F5750030EC36 /* BrightnessFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightnessFilter.swift; sourceTree = "<group>"; };
 		7BF8B6732A74F8EA0030EC36 /* UIImage+stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+stub.swift"; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		7BAA84432A728DE40029BF44 /* AwesomePhotoRedactor */ = {
 			isa = PBXGroup;
 			children = (
+				7BDF9BC12A75179300C01053 /* README.md */,
 				7BF8B6722A74F8D30030EC36 /* Utils */,
 				7BF8B66A2A74F1D20030EC36 /* Metal */,
 				7B0446B62A74EF6300D62AFC /* Resources */,
@@ -219,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BDF9BC22A75179300C01053 /* README.md in Resources */,
 				7BAA844C2A728DE50029BF44 /* Preview Assets.xcassets in Resources */,
 				7BAA84492A728DE50029BF44 /* Assets.xcassets in Resources */,
 			);
