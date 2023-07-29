@@ -84,6 +84,7 @@
 		7BAA84382A728DE40029BF44 = {
 			isa = PBXGroup;
 			children = (
+				7BDF9BC12A75179300C01053 /* README.md */,
 				7BAA84432A728DE40029BF44 /* AwesomePhotoRedactor */,
 				7BAA84422A728DE40029BF44 /* Products */,
 			);
@@ -100,7 +101,6 @@
 		7BAA84432A728DE40029BF44 /* AwesomePhotoRedactor */ = {
 			isa = PBXGroup;
 			children = (
-				7BDF9BC12A75179300C01053 /* README.md */,
 				7BF8B6722A74F8D30030EC36 /* Utils */,
 				7BF8B66A2A74F1D20030EC36 /* Metal */,
 				7B0446B62A74EF6300D62AFC /* Resources */,
