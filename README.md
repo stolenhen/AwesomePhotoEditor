@@ -3,8 +3,14 @@
 ## For launching the app it needs to be set the following scripts to the target build rules:
 
 For source files with names matching ci.metal:
-![Uploading Screenshot 2023-07-29 at 17.59.51.png…]()
+```
+script: xcrun metal -c -fcikernel "${INPUT_FILE_PATH}" -o "${SCRIPT_OUTPUT_FILE_0}"
+output files: $(DERIVED_FILE_DIR)/$(INPUT_FILE_BASE).air
+```
 
 
 For source files with names matching *.ci.air:
-![Uploading Screenshot 2023-07-29 at 18.01.54.png…]()
+```
+script: xcrun metallib -cikernel "${INPUT_FILE_PATH}" -o "${SCRIPT_OUTPUT_FILE_0}"
+output files: $(METAL_LIBRARY_OUTPUT_DIR)/$(INPUT_FILE_BASE).metallib
+```
