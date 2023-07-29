@@ -1,6 +1,6 @@
 # Example of a photo editor app 
 
-## For launching the app it needs to be set the following scripts to the target build rules:
+## To launch the app, the following scripts need to be set for the target build rules:
 
 For source files with names matching ci.metal:
 ```
