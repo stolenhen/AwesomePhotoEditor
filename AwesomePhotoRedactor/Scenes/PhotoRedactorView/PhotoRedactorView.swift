@@ -27,11 +27,7 @@ private extension PhotoRedactorView {
     
     @ViewBuilder
     var imageView: some View {
-        if let image = viewModel.image {
-            Image(uiImage: image).resizable()
-        } else {
-            Image(uiImage: .stub).resizable()
-        }
+        Image(uiImage: viewModel.image ?? .stub).resizable()
     }
     
     var sliderView: some View {
