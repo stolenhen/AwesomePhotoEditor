@@ -8,7 +8,8 @@
 import CoreImage
 
 protocol ImageFilter {
-    var inputImage: CIImage? { get }
-    var outputImage: CIImage? { get }
+    var inputImage: CIImage? { get set }
     var value: CGFloat? { get set }
+    
+    var outputImage: CIImage? { get }
 }

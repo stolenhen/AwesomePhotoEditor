@@ -13,7 +13,7 @@ final class PhotoRedactorViewModel: ObservableObject {
     
     // MARK: - Properties
     
-    private let filter: BrightnessFilter
+    private var filter: ImageFilter
     private let intensityQueue = DispatchQueue(label: "intensity_filter_queue", qos: .userInteractive)
     
     private var cancellables: Set<AnyCancellable> = []
@@ -29,7 +29,7 @@ final class PhotoRedactorViewModel: ObservableObject {
     
     // MARK: - Init
     
-    init(filter: BrightnessFilter = .init()) {
+    init(filter: ImageFilter = BrightnessFilter()) {
         self.filter = filter
         
         setInputFilterImage()
@@ -67,10 +67,8 @@ private extension PhotoRedactorViewModel {
     }
     
     func setInputFilterImage() {
-        guard let imageURL = Bundle.main.url(forResource: "awesome_monkey", withExtension: "jpg") else {
-            return
-        }
-        filter.inputImage = CIImage(contentsOf: imageURL)
+        guard let cgImage = UIImage.stub.cgImage else { return }
+        filter.inputImage = CIImage(cgImage: cgImage)
     }
     
     func setFilterValue(_ value: CGFloat) {

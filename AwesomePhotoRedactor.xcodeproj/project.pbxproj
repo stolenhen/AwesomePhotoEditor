@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B0446BA2A74F08E00D62AFC /* awesome_monkey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7B0446B92A74F08E00D62AFC /* awesome_monkey.jpg */; };
 		7BAA84452A728DE40029BF44 /* AwesomePhotoRedactorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAA84442A728DE40029BF44 /* AwesomePhotoRedactorApp.swift */; };
 		7BAA84472A728DE40029BF44 /* PhotoRedactorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAA84462A728DE40029BF44 /* PhotoRedactorView.swift */; };
 		7BAA84492A728DE50029BF44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BAA84482A728DE50029BF44 /* Assets.xcassets */; };
@@ -49,7 +48,6 @@
 /* End PBXBuildRule section */
 
 /* Begin PBXFileReference section */
-		7B0446B92A74F08E00D62AFC /* awesome_monkey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = awesome_monkey.jpg; sourceTree = "<group>"; };
 		7BAA84412A728DE40029BF44 /* AwesomePhotoRedactor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwesomePhotoRedactor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BAA84442A728DE40029BF44 /* AwesomePhotoRedactorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomePhotoRedactorApp.swift; sourceTree = "<group>"; };
 		7BAA84462A728DE40029BF44 /* PhotoRedactorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRedactorView.swift; sourceTree = "<group>"; };
@@ -76,7 +74,6 @@
 		7B0446B62A74EF6300D62AFC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7B0446B92A74F08E00D62AFC /* awesome_monkey.jpg */,
 				7BAA84482A728DE50029BF44 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -222,7 +219,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B0446BA2A74F08E00D62AFC /* awesome_monkey.jpg in Resources */,
 				7BAA844C2A728DE50029BF44 /* Preview Assets.xcassets in Resources */,
 				7BAA84492A728DE50029BF44 /* Assets.xcassets in Resources */,
 			);
