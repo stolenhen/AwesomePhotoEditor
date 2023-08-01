@@ -13,8 +13,8 @@ final class PhotoRedactorViewModel: ObservableObject {
     
     // MARK: - Properties
     
-    private var filter: ImageFilter
     private let intensityQueue = DispatchQueue(label: "intensity_filter_queue", qos: .userInteractive)
+    private var filter: ImageFilter
     
     private var cancellables: Set<AnyCancellable> = []
     
@@ -41,16 +41,6 @@ final class PhotoRedactorViewModel: ObservableObject {
     func resetFilter() {
         intensityValue = .zero
     }
-    
-    func applyFilter(with value: CGFloat) {
-        guard value != .zero else {
-            filter.value = nil
-            return image = .stub
-        }
-        
-        setFilterValue(value)
-        setFilteredImage()
-    }
 }
 
 private extension PhotoRedactorViewModel {
@@ -69,6 +59,16 @@ private extension PhotoRedactorViewModel {
     func setInputFilterImage() {
         guard let cgImage = UIImage.stub.cgImage else { return }
         filter.inputImage = CIImage(cgImage: cgImage)
+    }
+    
+    func applyFilter(with value: CGFloat) {
+        guard value != .zero else {
+            filter.value = .none
+            return image = .stub
+        }
+        
+        setFilterValue(value)
+        setFilteredImage()
     }
     
     func setFilterValue(_ value: CGFloat) {
@@ -102,9 +102,9 @@ private extension CGFloat {
     }
 }
 
-private extension CIImage? {
+private extension Optional where Wrapped == CIImage {
     var convertToCGImage: CGImage? {
-        guard let self else { return nil }
-        return CIContext(options: nil).createCGImage(self, from: self.extent)
+        guard let self else { return .none }
+        return CIContext(options: .none).createCGImage(self, from: self.extent)
     }
 }

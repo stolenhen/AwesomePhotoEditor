@@ -14,10 +14,10 @@ struct PhotoRedactorView: View {
         VStack {
             imageView
                 .scaledToFit()
-                .frame(height: 450)
+                .frame(height: 450.0)
             sliderView
         }
-        .padding([.horizontal, .vertical], 20)
+        .padding([.horizontal, .vertical], 20.0)
     }
 }
 
@@ -25,14 +25,13 @@ private extension PhotoRedactorView {
     
     // MARK: - Subviews
     
-    @ViewBuilder
     var imageView: some View {
         Image(uiImage: viewModel.image ?? .stub).resizable()
     }
     
     var sliderView: some View {
         VStack(spacing: .zero) {
-            HStack(alignment: .firstTextBaseline, spacing: 4) {
+            HStack(alignment: .firstTextBaseline, spacing: 4.0) {
                 Text("Intensity ").font(.title3)
                 Text(viewModel.stringIntensityValue)
                     .font(.caption2)
