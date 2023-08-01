@@ -23,6 +23,18 @@ struct PhotoRedactorView: View {
 
 private extension PhotoRedactorView {
     
+    // MARK: - Private logic
+    
+    func calculateColor() -> Color {
+        guard viewModel.intensityValue != .zero else {
+            return .secondary
+        }
+        return viewModel.intensityValue >= .zero ? Color(.systemGreen) : Color(.systemRed)
+    }
+}
+
+private extension PhotoRedactorView {
+    
     // MARK: - Subviews
     
     var imageView: some View {
@@ -35,14 +47,14 @@ private extension PhotoRedactorView {
                 Text("Intensity ").font(.title3)
                 Text(viewModel.stringIntensityValue)
                     .font(.caption2)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(calculateColor())
                     .bold()
                 Spacer()
                 resetButtonView
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             Slider(value: $viewModel.intensityValue, in: viewModel.intensityRange)
-                .tint(viewModel.intensityValue >= .zero ? Color(.systemBlue) : Color(.systemRed))
+                .tint(calculateColor())
         }
         .padding(10)
     }
